@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        #wrap{width: 200px;margin: 0px auto;border: 10px solid black;}
+        #box1{width: 150px;height: 200px;background: red; float: left;}
+        .clear:after{content: "";display: block;clear: both;}
+        /*
+        在IE67下如果浮动元素父级有宽度就不用清浮动
+        触发haslayout的属性
+        display：inline-block;
+        height:(任何值除auto)
+        width:(任何值除auto)
+        float:(left或right)
+        zoom：(除normal外任意值)
+        */
+    </style>
+</head>
+<body>
+<div id="wrap" class="clear">
+    <div id="box1"></div>
+</div>
+</body>
+</html>

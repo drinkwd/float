@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        #wrap{width: 200px;margin: 0px auto;border: 10px solid black;}
+        #box1{width: 150px;height: 200px;background: red;
+            float: left;}
+        #clear{height: 0px;background: white;clear: left}
+        /*
+        IE6下的最小高度问题  如果元素高度小于19那么他的高度会被当做19px来处理
+        第一种解决办法font-size：0;还是有2px的高度
+        在浮动元素下加一个空的div加上
+        #clear{height: 0px;background: white;clear: left}
+        overflow:auto/hidden 也可以清浮动给浮动元素父级触发haslayout
+        */
+    </style>
+</head>
+<body>
+<div id="wrap">
+    <div id="box1"></div>
+    <div id="clear"></div>
+</div>
+</body>
+</html>
